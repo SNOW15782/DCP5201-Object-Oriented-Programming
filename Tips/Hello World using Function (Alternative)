@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std; 
+
+//Alternative way where int main is above 
+
+//declare 
+void helloworld();
+
+
+//callback 
+int main ()
+{
+	helloworld();
+	helloworld();
+	helloworld();
+	return 0; 
+}
+
+//define 
+void helloworld()
+{
+	cout << "Hello world!"<<endl;
+}
