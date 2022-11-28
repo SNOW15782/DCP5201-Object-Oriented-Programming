@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std; 
+//function definition
+double kineticEnergy (double m, double v)
+{
+	double KE = 1; 
+	KE = 0.5*m* (v*v);
+	return KE;
+}
+
+//function call 
+int main ()
+{
+	double m;
+	double v;
+	
+	cout << "Enter an object's mass and velocity as required...\n\n";
+	cout << "Mass in Kilograms : ";
+	cin >> m;
+	
+	cout << "Velocity in meters per second : ";
+	cin >> v;
+	
+	//call result calculation on kineticEnergy back
+	cout << "The kinetic energy of this object is " << kineticEnergy(m,v) <<" joules" << endl; 
+	
+}
