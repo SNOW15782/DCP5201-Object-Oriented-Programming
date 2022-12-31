@@ -15,7 +15,7 @@ class Employee
 	
 	//PUBLIC
 	public: 
-		//CONSTRUCTOR 
+		//CONSTRUCTOR VALUE AS ARGUMENT
 		Employee (string n, int id, string dept, string post)
 		{
 			name = n;
@@ -24,7 +24,7 @@ class Employee
 			position = post;
 		}
 	
-		//CONSTURCTOR
+		//CONSTURCTOR VALUE AS ARUGMENT
 		Employee (string n, int id)
 		{
 			name = n;
