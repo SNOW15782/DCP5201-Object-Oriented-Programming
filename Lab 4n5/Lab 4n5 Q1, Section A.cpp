@@ -18,6 +18,7 @@ void setdata (int a, int b )
 	nume = a;
 	denom = b; 
 }
+//accessor 
 int getNume()
 {
 	return nume;
