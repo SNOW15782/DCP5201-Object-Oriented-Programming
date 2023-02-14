@@ -11,7 +11,7 @@ class Fraction
 private: 
 	int denom; 
 	int nume;
-	
+//bring private to public using accessor 	
 public: 
 void setdata (int a, int b )
 {
