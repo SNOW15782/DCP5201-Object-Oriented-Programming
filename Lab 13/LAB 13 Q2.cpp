@@ -1,3 +1,6 @@
+//MUHAMAD ARIF BIN SALLEHUDDIN 
+//LAB 13 
+//Q2
 #include <iostream>
 #include <iomanip>
 using namespace std;
