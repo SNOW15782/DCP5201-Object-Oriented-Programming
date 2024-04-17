@@ -21,7 +21,7 @@ int main ()
 
 //Output 
 
-	cout << "\nQtech Sdn. Bhd Sales figures for 2 days";
+	cout << "\nQtech Sdn. Bhd Sales figures for 2 days\n";
 	cout << "Day 1 \t: "<<fixed<<setprecision(2) << day1 <<endl;	
 	cout << "Day 2 \t: "<<fixed<<setprecision(2) << day2 <<endl;
 	cout << "Total \t: "<<fixed<<setprecision(2) << total <<endl;
