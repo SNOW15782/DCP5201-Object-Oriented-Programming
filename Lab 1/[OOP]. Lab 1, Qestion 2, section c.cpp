@@ -4,23 +4,23 @@
 //Section c
 
 #include <iostream>
-#include <iomanip>
-using namespace std; 
+using namespace std;
 
-int main ()
-{
-	int count=0, number=0,total=0; 
-	do
-	{
-		cout << "Enter a number: ";
-		cin >> number;
-		count++;
-		total = total +number;
-		
-	}
-	while (count<4);
-	
-	cout << "The total is "<<total;
-	
-	return 0; 
+int main() {
+    int number;
+    int total = 0;
+
+    do {
+        cout << "Enter a number :";
+        cin >> number;
+        if (number != 99) {
+            total += number;
+        }
+    } while (number != 99);
+
+    cout << "The total is " << total << endl;
+
+    return 0;
 }
+
+
