@@ -33,6 +33,6 @@ int main ()
 	
 	
 	//output 
-	cout << "Wages for this week are "<<total_wages; 
+	cout << "Wages for this week are: MYR "<<total_wages << endl;
 	return 0; 
 }
