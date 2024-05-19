@@ -96,47 +96,43 @@ void func(Books &book)
 
 //main 
 //create object of class Books called B1
-int main ()
-{
-	Books B1 ("102009912", "7 Habits of Highly Effective People","Stephen Covey", 400, 30);
-	
-	//call calcDiscountedPrice () and print using B1
+int main()
+{ 
+//initialize object with data values
+	Books B1("102009912","7 Habits of Highly Effective People", "Stephen Covey",400.00,30);
+
+//call functions of object to calculate and display data 
+	cout<<".........Book of the Month..... "<<endl;
 	B1.calcDiscountedPrice();
 	B1.print();
-	
-	//Create array if class 
-	Books B2[3]; 
-	
-	cout << "\nNow we shall enter and display data for 3 special books..."<<endl;
-	
-	for (int i = 0; i<3; i++)
-	{
-		func(B2[i]);
-	}
-	
-	//determine the most expensive book's price (after this discount)
-	float maxprice = B2[0].getDiscountedPrice();
-	for (int i = 1; i<3; i++)
-	{
-		if (B2[i].getDiscountedPrice() >maxprice)
-		{
-			maxprice = B2[i].getDiscountedPrice();
-		}
-	}
-	
-	cout << "\nThe most expensive book's price (after discount) is: "<<maxprice << endl;
-	
-	int numBelow30 = 0;
-	for (int i = 0; i<3; i++)
-	{
-		if (B2[i].getDiscountedPrice() <30)
-		{
-			numBelow30++;
-		}
-	}
-	
-	cout << "\nThe number of books whose price after discount is below RM 30 is: "<<cout << endl; 
-	return 0; 
-}
 
-//for some reason i cannot get discounted price: 280.00 ringgit 
+//declare array of objects 
+	Books B2[3];
+	float expensive = 0.00, discprc; 
+	int below = 0;
+	cout<<"\nNow we shall enter and display data for 3 special books... "<<endl;
+
+//loop to call functions for array of objects 
+	for(int i=0;i<3;i++)
+	{
+		func(B2[i]); //function calls object mutator, calculate 
+		discount, display
+		discprc = B2[i].getDiscountedPrice(); //access price after discount
+		
+//determine most expensive book 
+	if(expensive<discprc)
+		{
+		expensive = discprc;
+		}
+
+//accumulate count of books with price below 30 after discount 
+	if(discprc<30)
+	below++;
+	}
+
+//display most expensive book price and number of books below 30 after discount
+	cout<<"\n "<<endl;
+	cout<<"The most expensive book is RM "<<expensive<<endl;
+	cout<<"The number of books that are below RM 30 are:"<<below<<endl; 
+	return 0;
+	}
